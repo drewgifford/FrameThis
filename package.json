@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "@types/node": "^20.4.5",
+    "axios": "^1.4.0",
+    "canvas": "^2.11.2",
+    "discord-emoji-canvas": "^1.4.0",
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.3.1",
+    "node-canvas-with-twemoji-and-discord-emoji": "^1.2.1",
+    "node-dotenv": "^1.1.1",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "twemoji-parser": "^14.0.0",
+    "typescript": "^5.1.6"
+  },
+  "name": "framethis",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "exports": "./dist/index.js",
+  "scripts": {
+    "start": "node .",
+    "start:dev": "nodemon --config nodemon.json src/index.ts",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
