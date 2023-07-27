@@ -80,7 +80,7 @@ export default event(Events.MessageCreate, async ({log}, message) => {
 
     let xPad = SCALE * (AVATAR_SIZE + X_GAP);
 
-    let widthFromLongestLine = Math.max(150, xPad + (messageData.attachment?.width || 0) + FRAME_GAP, xPad + (Math.max(lineData.longest, messageData.nickname.length) * 8) + FRAME_GAP) * SCALE;
+    let widthFromLongestLine = Math.max(150, xPad + (messageData.attachment?.width || 0) + FRAME_GAP, xPad + (Math.max(lineData.longest, messageData.nickname.length) * 8) + FRAME_GAP + AVATAR_SIZE) * SCALE;
     let heightFromLineCount = (lineData.lines.length * (TEXT_SIZE + 1) + (50) + (messageData.attachment?.height || 0)) * SCALE;
 
     let xSections = Math.ceil(widthFromLongestLine / frameTop.width);
