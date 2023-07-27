@@ -25,7 +25,7 @@ export default event(Events.MessageCreate, async ({log}, message) => {
 
 
     let client = message.client;
-    if (!message.mentions.has(client.user)) return;
+    if (!(message.content.includes(`<@${message.client.user.id}>`))) return;
     if (message.author.id == client.user.id) return;
     if (!message.member) return;
 
